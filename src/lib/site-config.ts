@@ -4,39 +4,16 @@
  */
 
 /** WhatsApp Business destination. Replace with the link supplied by the Academy. */
-export const WHATSAPP_URL = "https://wa.me/0000000000?text=I%20want%20to%20join%20the%20FREE%20WRITE%202%20EARN%20Webinar";
-
+export const WHATSAPP_URL = "https://chat.whatsapp.com/LjjvORk6RZ6KD9vsB7HnsT?s=cl&p=a&mlu=4";
 /** Meta Pixel ID. Leave empty to disable the pixel. */
 export const META_PIXEL_ID = "";
 
 /** Google Analytics measurement ID (G-XXXXXXX). Leave empty to disable. */
 export const GA_MEASUREMENT_ID = "";
 
-/** Appends the current page's UTM/campaign params to the WhatsApp link. */
+/** Returns the WhatsApp group invite link as-is (group links can't carry a pre-filled message or extra tracking params). */
 export function whatsappHref(): string {
-  if (typeof window === "undefined") return WHATSAPP_URL;
-  try {
-    const src = new URLSearchParams(window.location.search);
-    const keep = [
-      "utm_source",
-      "utm_medium",
-      "utm_campaign",
-      "utm_content",
-      "utm_term",
-      "fbclid",
-    ];
-    const carried = keep
-      .filter((k) => src.get(k))
-      .map((k) => `${k}=${src.get(k)}`)
-      .join(" ");
-    if (!carried) return WHATSAPP_URL;
-    const url = new URL(WHATSAPP_URL);
-    const text = url.searchParams.get("text") ?? "";
-    url.searchParams.set("text", `${text} [${carried}]`.trim());
-    return url.toString();
-  } catch {
-    return WHATSAPP_URL;
-  }
+  return WHATSAPP_URL;
 }
 
 declare global {

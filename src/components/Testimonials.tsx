@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Reveal } from "./Reveal";
 
 const t1 = "/images/testimonial1.jpeg";
 const t2 = "/images/testimonial2.jpeg";
@@ -17,24 +18,23 @@ export function Testimonials() {
     <>
       <ul className="-mx-4 flex snap-x snap-mandatory items-start gap-4 overflow-x-auto px-4 pb-4 md:mx-0 md:grid md:grid-cols-3 md:items-start md:overflow-visible md:px-0 lg:grid-cols-4">
         {shots.map((s, i) => (
-          <li
-            key={s}
-            className="w-[74vw] shrink-0 snap-center sm:w-[46vw] md:w-auto"
-          >
-            <button
-              type="button"
-              onClick={() => setOpen(s)}
-              className="group block w-full overflow-hidden rounded-xl border border-gold/25 bg-ink-soft focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-gold/40"
-              aria-label={`View student testimonial ${i + 1} larger`}
-            >
-              <img
-                src={s}
-                alt={`Authentic Writerpreneur Academy student testimonial screenshot ${i + 1}`}
-                loading="lazy"
-                decoding="async"
-                className="h-auto w-full object-contain transition-transform duration-300 group-hover:scale-[1.02]"
-              />
-            </button>
+          <li key={s} className="w-[74vw] shrink-0 snap-center sm:w-[46vw] md:w-auto">
+            <Reveal delay={i * 100}>
+              <button
+                type="button"
+                onClick={() => setOpen(s)}
+                className="group block w-full overflow-hidden rounded-xl border border-gold/25 bg-ink-soft focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-gold/40"
+                aria-label={`View student testimonial ${i + 1} larger`}
+              >
+                <img
+                  src={s}
+                  alt={`Authentic Writerpreneur Academy student testimonial screenshot ${i + 1}`}
+                  loading="lazy"
+                  decoding="async"
+                  className="h-auto w-full object-contain transition-transform duration-300 group-hover:scale-[1.02]"
+                />
+              </button>
+            </Reveal>
           </li>
         ))}
       </ul>

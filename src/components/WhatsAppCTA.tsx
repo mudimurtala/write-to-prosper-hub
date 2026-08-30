@@ -1,10 +1,13 @@
-import { trackWhatsAppClick, whatsappHref, WHATSAPP_URL } from "@/lib/site-config";
+import { Link } from "@tanstack/react-router";
+import { trackWhatsAppClick } from "@/lib/site-config";
+
 type Props = {
   label?: string;
   location: string;
   size?: "lg" | "md";
   className?: string;
 };
+
 export function WhatsAppCTA({
   label = "JOIN THE FREE WEBINAR ON WHATSAPP",
   location,
@@ -12,14 +15,9 @@ export function WhatsAppCTA({
   className = "",
 }: Props) {
   return (
-    <a
-      href={WHATSAPP_URL}
-      target="_blank"
-      rel="noopener noreferrer"
-      onClick={(e) => {
-        trackWhatsAppClick(location);
-        e.currentTarget.href = whatsappHref();
-      }}
+    <Link
+      to="/join"
+      onClick={() => trackWhatsAppClick(location)}
       className={[
         "group inline-flex items-center justify-center gap-2 rounded-full sm:gap-3",
         "bg-gold text-ink font-semibold tracking-wide uppercase",
@@ -39,6 +37,6 @@ export function WhatsAppCTA({
       <span className="whitespace-nowrap text-center text-[clamp(0.55rem,3vw,0.875rem)] sm:text-sm md:text-base">
         {label}
       </span>
-    </a>
+    </Link>
   );
 }
