@@ -13,7 +13,13 @@ export default defineConfig({
     }),
     react(),
     tailwindcss(),
-    netlify(),
+    netlify({
+      dev: {
+        edgeFunctions: {
+          enabled: false,
+        },
+      },
+    }),
   ],
   resolve: {
     tsconfigPaths: true,

@@ -5,7 +5,7 @@ import { Faq, faqs } from "@/components/Faq";
 
 const logo = "/images/Logo Writerpreneur Academy.jpeg";
 const coach = "/images/Coach photograph — Afeez Amusa Onireke.jpeg";
-const promo = "/images/WRITE 2 EARN promotional image.jpeg";
+const promo = "/images/new-promo-image.jpeg";
 
 const TITLE = "WRITE 2 EARN — FREE Webinar | Writerpreneur Academy";
 const DESC =
@@ -73,6 +73,9 @@ const audience = [
   "Professional",
   "Job Seeker",
   "Aspiring Freelancer",
+  "Artisan",
+  "Fresh Graduate",
+  "Corps Member",
 ];
 
 function Eyebrow({ children }: { children: React.ReactNode }) {
@@ -104,34 +107,40 @@ function LandingPage() {
       <header className="relative overflow-hidden border-b border-gold/20">
         <div className="mx-auto grid w-full max-w-6xl items-center gap-10 px-5 pb-16 pt-10 sm:px-8 md:grid-cols-[1.1fr_0.9fr] md:pb-24 md:pt-14">
           <div>
-            <img
-              src={logo}
-              alt="Writerpreneur Academy logo — Write. Earn. Impact."
-              width={132}
-              height={132}
-              className="mb-8 h-28 w-28 rounded-xl object-cover sm:h-32 sm:w-32"
-            />
-            <p className="mb-5 inline-flex items-center gap-2 rounded-full border border-gold/40 px-4 py-1.5 text-[11px] font-semibold uppercase tracking-[0.22em] text-gold">
-              Free Webinar · Limited Slots Available
-            </p>
-            <h1 className="text-5xl leading-[0.95] sm:text-6xl md:text-7xl">
-              <span className="block text-foreground">WRITE</span>
-              <span className="gold-text block">2 EARN</span>
-            </h1>
+            <div className="text-center md:text-left">
+              <img
+                src={logo}
+                alt="Writerpreneur Academy logo — Write. Earn. Impact."
+                width={132}
+                height={132}
+                className="mx-auto mb-8 h-28 w-28 rounded-xl object-cover sm:h-32 sm:w-32 md:mx-0"
+              />
+              <p className="mb-5 inline-flex items-center gap-2 rounded-full border border-gold/40 px-4 py-1.5 text-[11px] font-semibold uppercase tracking-[0.22em] text-gold">
+                Free Webinar · Limited Slots Available
+              </p>
+              <h1 className="text-5xl leading-[0.95] sm:text-6xl md:text-7xl">
+                <span className="text-white">WRITE </span>
+                <span className="text-gold text-[1.25em]">2</span>
+                <span className="text-white"> EARN</span>
+              </h1>
+            </div>
             <p className="mt-6 max-w-lg text-base leading-relaxed text-muted-foreground sm:text-lg">
               Learn how to turn your writing skills into income and create real value with your
               words. Discover the writing skills you can learn, package and offer as professional
-              services — even if you are just starting out.
+              services even if you are just starting out.
             </p>
             <div className="mt-8">
               <WhatsAppCTA location="hero" />
             </div>
-            <p className="mt-4 text-xs uppercase tracking-[0.2em] text-muted-foreground">
+            <p className="mt-4 text-center text-xs uppercase tracking-[0.2em] text-muted-foreground md:text-left">
               Hosted by Afeez Amusa Onireke · Clarity Coach
             </p>
           </div>
           <div className="relative">
-            <div className="absolute -inset-3 rounded-2xl border border-gold/25" aria-hidden="true" />
+            <div
+              className="absolute -inset-3 rounded-2xl border border-gold/25"
+              aria-hidden="true"
+            />
             <img
               src={promo}
               alt="WRITE 2 EARN free webinar promotional artwork featuring host Afeez Amusa Onireke"
@@ -153,11 +162,16 @@ function LandingPage() {
           <div className="panel p-6">
             <h3 className="text-lg text-gold">You can already write</h3>
             <ul className="mt-4 space-y-2 text-sm text-muted-foreground">
-              {["Social media posts", "School assignments", "Reports", "Stories", "Emails", "Business documents"].map(
-                (i) => (
-                  <li key={i}>— {i}</li>
-                ),
-              )}
+              {[
+                "Social media posts",
+                "School assignments",
+                "Reports",
+                "Stories",
+                "Emails",
+                "Business documents",
+              ].map((i) => (
+                <li key={i}>— {i}</li>
+              ))}
             </ul>
           </div>
           <div className="panel p-6">
@@ -184,15 +198,11 @@ function LandingPage() {
       {/* What you will learn */}
       <Section>
         <Eyebrow>What You Will Learn</Eyebrow>
-        <h2 className="text-3xl leading-tight sm:text-4xl">
-          Outcomes you leave the webinar with
-        </h2>
+        <h2 className="text-3xl leading-tight sm:text-4xl">Outcomes you leave the webinar with</h2>
         <ol className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {learn.map((l, i) => (
             <li key={l.k} className="panel p-6">
-              <span className="text-xs tracking-[0.2em] text-gold/70">
-                0{i + 1}
-              </span>
+              <span className="text-xs tracking-[0.2em] text-gold/70">0{i + 1}</span>
               <h3 className="mt-2 text-xl text-gold">{l.k}</h3>
               <p className="mt-1 text-sm text-muted-foreground">{l.v}</p>
             </li>
@@ -232,7 +242,9 @@ function LandingPage() {
       {/* Who it's for */}
       <Section>
         <Eyebrow>Who Should Attend</Eyebrow>
-        <h2 className="text-3xl leading-tight sm:text-4xl">This webinar is for you if you are a:</h2>
+        <h2 className="text-3xl leading-tight sm:text-4xl">
+          This webinar is for you if you are a:
+        </h2>
         <ul className="mt-8 flex flex-wrap gap-3">
           {audience.map((a) => (
             <li
@@ -272,7 +284,7 @@ function LandingPage() {
               behind Writerpreneur Academy, he trains writers to choose the right skill, package it
               as a service and position themselves for real opportunities.
             </p>
-            <div className="mt-8">
+            <div className="mt-8 text-center md:text-left">
               <WhatsAppCTA location="after-coach" size="md" label="JOIN FREE ON WHATSAPP" />
             </div>
           </div>
@@ -288,9 +300,7 @@ function LandingPage() {
             learn valuable writing skills, turn those skills into professional services and build
             sustainable writing careers.
           </h2>
-          <p className="mt-6 font-display text-xl tracking-wide text-gold">
-            Write. Earn. Impact.
-          </p>
+          <p className="mt-6 font-display text-xl tracking-wide text-gold">Write. Earn. Impact.</p>
         </div>
       </Section>
 
@@ -356,6 +366,15 @@ function LandingPage() {
         />
         <p className="mt-4 text-xs uppercase tracking-[0.25em] text-muted-foreground">
           Writerpreneur Academy · Write. Earn. Impact.
+        </p>
+        <p className="mt-4 text-sm text-muted-foreground">
+          Contact:{" "}
+          <a
+            href="tel:+2348160482356"
+            className="font-medium text-gold underline-offset-4 hover:underline"
+          >
+            +234 816 048 2356
+          </a>
         </p>
         <p className="mt-2 text-xs text-muted-foreground/70">
           © {new Date().getFullYear()} Writerpreneur Academy. All rights reserved.

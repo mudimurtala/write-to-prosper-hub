@@ -15,7 +15,7 @@ export function Testimonials() {
 
   return (
     <>
-      <ul className="-mx-4 flex snap-x snap-mandatory gap-4 overflow-x-auto px-4 pb-4 md:mx-0 md:grid md:grid-cols-3 md:overflow-visible md:px-0 lg:grid-cols-4">
+      <ul className="-mx-4 flex snap-x snap-mandatory items-start gap-4 overflow-x-auto px-4 pb-4 md:mx-0 md:grid md:grid-cols-3 md:items-start md:overflow-visible md:px-0 lg:grid-cols-4">
         {shots.map((s, i) => (
           <li
             key={s}
@@ -24,15 +24,15 @@ export function Testimonials() {
             <button
               type="button"
               onClick={() => setOpen(s)}
-              className="block w-full overflow-hidden rounded-xl border border-gold/25 bg-ink-soft focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-gold/40"
-              aria-label={`Open student testimonial ${i + 1} full size`}
+              className="group block w-full overflow-hidden rounded-xl border border-gold/25 bg-ink-soft focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-gold/40"
+              aria-label={`View student testimonial ${i + 1} larger`}
             >
               <img
                 src={s}
                 alt={`Authentic Writerpreneur Academy student testimonial screenshot ${i + 1}`}
                 loading="lazy"
                 decoding="async"
-                className="h-[360px] w-full object-cover object-top transition-opacity hover:opacity-90"
+                className="h-auto w-full object-contain transition-transform duration-300 group-hover:scale-[1.02]"
               />
             </button>
           </li>
