@@ -1,11 +1,12 @@
 import { useState } from "react";
-import t1 from "@/assets/testimonial1.jpg.asset.json";
-import t2 from "@/assets/testimonial2.jpg.asset.json";
-import t3 from "@/assets/testimonial3.jpg.asset.json";
-import t4 from "@/assets/testimonial4.jpg.asset.json";
-import t5 from "@/assets/testimonial5.jpg.asset.json";
-import t6 from "@/assets/testimonial6.jpg.asset.json";
-import t7 from "@/assets/testimonial7.jpg.asset.json";
+
+const t1 = "/images/testimonial1.jpeg";
+const t2 = "/images/testimonial2.jpeg";
+const t3 = "/images/testimonial3.jpeg";
+const t4 = "/images/testimonial4.jpeg";
+const t5 = "/images/testimonial5.jpeg";
+const t6 = "/images/testimonial6.jpeg";
+const t7 = "/images/testimonial7.jpeg";
 
 const shots = [t1, t2, t3, t4, t5, t6, t7];
 

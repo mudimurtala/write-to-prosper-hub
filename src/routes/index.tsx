@@ -2,9 +2,10 @@ import { createFileRoute } from "@tanstack/react-router";
 import { WhatsAppCTA } from "@/components/WhatsAppCTA";
 import { Testimonials } from "@/components/Testimonials";
 import { Faq, faqs } from "@/components/Faq";
-import logo from "@/assets/Logo_Writerpreneur_Academy.jpg.asset.json";
-import coach from "@/assets/Coach_photograph_-_Afeez_Amusa_Onireke.jpg.asset.json";
-import promo from "@/assets/WRITE_2_EARN_promotional_image.jpg.asset.json";
+
+const logo = "/images/Logo Writerpreneur Academy.jpeg";
+const coach = "/images/Coach photograph — Afeez Amusa Onireke.jpeg";
+const promo = "/images/WRITE 2 EARN promotional image.jpeg";
 
 const TITLE = "WRITE 2 EARN — FREE Webinar | Writerpreneur Academy";
 const DESC =
