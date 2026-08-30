@@ -118,7 +118,7 @@ function LandingPage() {
               <p className="mb-5 inline-flex items-center gap-2 rounded-full border border-gold/40 px-4 py-1.5 text-[11px] font-semibold uppercase tracking-[0.22em] text-gold">
                 Free Webinar · Limited Slots Available
               </p>
-              <h1 className="text-5xl leading-[0.95] sm:text-6xl md:text-7xl">
+              <h1 className="text-[clamp(2rem,9vw,3rem)] leading-[0.95] sm:text-6xl md:text-7xl">
                 <span className="text-white">WRITE </span>
                 <span className="text-gold text-[1.25em]">2</span>
                 <span className="text-white"> EARN</span>
@@ -214,7 +214,7 @@ function LandingPage() {
             </li>
           ))}
         </ol>
-        <div className="mt-10">
+        <div className="mt-10 text-center">
           <WhatsAppCTA location="after-benefits" label="GET MY FREE WEBINAR SEAT" />
         </div>
       </Section>
@@ -324,8 +324,8 @@ function LandingPage() {
 
       {/* Free offer */}
       <Section>
-        <div className="rounded-2xl border border-gold/35 bg-ink-soft p-8 text-center md:p-14">
-          <h2 className="text-4xl sm:text-5xl">
+        <div className="rounded-2xl border border-gold/35 bg-ink-soft p-5 text-center sm:p-10 md:p-14">
+          <h2 className="text-[clamp(1.5rem,7vw,2.25rem)] sm:text-5xl">
             <span className="gold-text">Your seat is free.</span>
           </h2>
           <p className="mx-auto mt-5 max-w-xl text-muted-foreground">
