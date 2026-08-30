@@ -1,16 +1,23 @@
 # Writerpreneur Academy
 
-A landing page for Writerpreneur Academy's **Write 2 Earn** webinar.
+A landing page for Writerpreneur Academy's **Write 2 Earn** webinar, built to turn social media visitors into an active WhatsApp community.
 
-## Development
+**Live site:** [writerpreneur-academy.netlify.app](https://writerpreneur-academy.netlify.app/)
 
-This project is built with:
+## About
+
+Writerpreneur Academy teaches people how to turn writing skills into real income. This site presents the free Write2Earn webinar and guides visitors straight into the community WhatsApp group, with a built in admin dashboard so the client can update the group link at any time without needing a developer.
+
+## Built With
 
 * **TanStack Start**
 * **React**
 * **TypeScript**
 * **Vite**
 * **Tailwind CSS**
+* **Firebase** (Authentication and Firestore, powering the admin dashboard)
+
+## Development
 
 ### Install dependencies
 
@@ -24,7 +31,7 @@ npm install
 npm run dev
 ```
 
-The development server will start locally. Open the URL shown in your terminal, usually:
+Open the URL shown in your terminal, usually:
 
 ```text
 http://localhost:8080/
@@ -54,16 +61,16 @@ npm run lint
 npm run format
 ```
 
-## Project structure
+## Project Structure
 
 ```text
 writerpreneur-academy/
 ├── public/          # Static assets such as images and favicon
 ├── src/
-│   ├── components/ # Reusable React components
-│   ├── hooks/      # Custom React hooks
-│   ├── lib/        # Utility functions
-│   └── routes/     # Application routes
+│   ├── components/  # Reusable React components
+│   ├── hooks/       # Custom React hooks
+│   ├── lib/         # Utility functions and Firebase config
+│   └── routes/      # Application routes, including the admin dashboard
 ├── package.json     # Project dependencies and scripts
 ├── vite.config.ts   # Vite configuration
 └── tsconfig.json    # TypeScript configuration
@@ -71,18 +78,18 @@ writerpreneur-academy/
 
 ## Deployment
 
-The project is deployed through **Netlify** and connected to the GitHub repository.
+The project is deployed through **Netlify** and connected to this GitHub repository.
 
-The normal workflow is:
+The normal workflow:
 
 1. Make changes locally.
 2. Run `npm run dev`.
-3. Test and review the website in the browser.
-4. Run `npm run build` to verify the production build.
+3. Test and review the site in the browser.
+4. Run `npm run build` to confirm the production build works.
 5. Commit the changes with Git.
 6. Push the changes to GitHub.
 7. Netlify automatically deploys the updated version.
 
 ## License
 
-This project is private and maintained for Writerpreneur Academy.
+This project is maintained for Writerpreneur Academy.
