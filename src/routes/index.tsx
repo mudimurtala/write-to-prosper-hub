@@ -7,7 +7,7 @@ const logo = "/images/Logo Writerpreneur Academy.jpeg";
 const coach = "/images/Coach photograph — Afeez Amusa Onireke.jpeg";
 const promo = "/images/new-promo-image.jpeg";
 
-const TITLE = "WRITE 2 EARN — FREE Webinar | Writerpreneur Academy";
+const TITLE = "WRITE2EARN FREE Webinar | Writerpreneur Academy";
 const DESC =
   "Join the FREE Write 2 Earn Webinar by Writerpreneur Academy and learn how to turn your writing skills into income, opportunities and lasting impact.";
 
