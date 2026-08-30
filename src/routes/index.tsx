@@ -21,9 +21,9 @@ export const Route = createFileRoute("/")({
       { property: "og:description", content: DESC },
       { property: "og:type", content: "website" },
       { property: "og:url", content: "/" },
-      { property: "og:image", content: promo.url },
+      { property: "og:image", content: promo },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:image", content: promo.url },
+      { name: "twitter:image", content: promo },
     ],
     links: [{ rel: "canonical", href: "/" }],
     scripts: [
@@ -105,7 +105,7 @@ function LandingPage() {
         <div className="mx-auto grid w-full max-w-6xl items-center gap-10 px-5 pb-16 pt-10 sm:px-8 md:grid-cols-[1.1fr_0.9fr] md:pb-24 md:pt-14">
           <div>
             <img
-              src={logo.url}
+              src={logo}
               alt="Writerpreneur Academy logo — Write. Earn. Impact."
               width={132}
               height={132}
@@ -133,7 +133,7 @@ function LandingPage() {
           <div className="relative">
             <div className="absolute -inset-3 rounded-2xl border border-gold/25" aria-hidden="true" />
             <img
-              src={promo.url}
+              src={promo}
               alt="WRITE 2 EARN free webinar promotional artwork featuring host Afeez Amusa Onireke"
               className="relative w-full rounded-xl object-cover"
               fetchPriority="high"
@@ -253,7 +253,7 @@ function LandingPage() {
       <Section className="bg-ink-soft">
         <div className="grid items-center gap-10 md:grid-cols-[0.8fr_1.2fr]">
           <img
-            src={coach.url}
+            src={coach}
             alt="Afeez Amusa Onireke, Founder of Writerpreneur Academy"
             loading="lazy"
             decoding="async"
@@ -349,7 +349,7 @@ function LandingPage() {
 
       <footer className="border-t border-gold/20 px-5 py-8 text-center sm:px-8">
         <img
-          src={logo.url}
+          src={logo}
           alt="Writerpreneur Academy"
           loading="lazy"
           className="mx-auto h-14 w-14 rounded-lg object-cover"
