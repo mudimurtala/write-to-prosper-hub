@@ -1,5 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { WHATSAPP_URL, whatsappHref, trackWhatsAppClick } from "@/lib/site-config";
+import { trackWhatsAppClick } from "@/lib/site-config";
+import { useWhatsAppUrl } from "@/hooks/use-whatsapp-url";
 
 const TITLE = "Join the WhatsApp Group | Writerpreneur Academy";
 const DESC = "You're almost in. A few quick notes before you join the Write 2 Earn WhatsApp group.";
@@ -12,6 +13,8 @@ export const Route = createFileRoute("/join")({
 });
 
 function JoinPage() {
+  const whatsappUrl = useWhatsAppUrl();
+
   return (
     <div className="min-h-screen bg-background px-5 py-12 sm:px-8 md:py-20">
       <div className="mx-auto w-full max-w-lg text-center">
@@ -32,7 +35,7 @@ function JoinPage() {
           </p>
           <p className="mt-4 text-sm leading-relaxed text-muted-foreground">
             If tapping the button below takes you to a &quot;Download WhatsApp&quot; page instead of
-            the group, don&apos;t panic, you already have WhatsApp. Just do this:
+            the group, don&apos;t panic — you already have WhatsApp. Just do this:
           </p>
           <ol className="mt-4 space-y-3 text-sm text-foreground">
             <li className="flex gap-2">
@@ -45,22 +48,19 @@ function JoinPage() {
             </li>
             <li className="flex gap-2">
               <span aria-hidden="true">👉</span>
-              <span>Tap the Join button again, it&apos;ll take you straight in</span>
+              <span>Tap the Join button again — it&apos;ll take you straight in</span>
             </li>
           </ol>
           <p className="mt-5 text-sm font-medium text-gold">
-            That&apos;s it. Don&apos;t download anything, you&apos;re already good to go.
+            That&apos;s it. Don&apos;t download anything — you&apos;re already good to go.
           </p>
         </div>
 
         <a
-          href={WHATSAPP_URL}
+          href={whatsappUrl}
           target="_blank"
           rel="noopener noreferrer"
-          onClick={(e) => {
-            trackWhatsAppClick("join-page");
-            e.currentTarget.href = whatsappHref();
-          }}
+          onClick={() => trackWhatsAppClick("join-page")}
           className="group mt-8 inline-flex items-center justify-center gap-2 rounded-full bg-gold px-6 py-3.5 font-semibold uppercase tracking-wide text-ink shadow-gold transition-transform duration-200 hover:scale-[1.02] active:scale-[0.99] focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-gold/40 sm:gap-3 sm:px-7 sm:py-4"
         >
           <svg
