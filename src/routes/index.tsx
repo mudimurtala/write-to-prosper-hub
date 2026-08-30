@@ -5,7 +5,7 @@ import { Faq, faqs } from "@/components/Faq";
 
 const logo = "/images/Logo Writerpreneur Academy.jpeg";
 const coach = "/images/Coach photograph — Afeez Amusa Onireke.jpeg";
-const promo = "/images/new-promo-image.jpeg";
+const promo = "/images/new-promo-image2.jpeg";
 
 const TITLE = "WRITE2EARN FREE Webinar | Writerpreneur Academy";
 const DESC =
@@ -382,6 +382,13 @@ function LandingPage() {
             className="font-medium text-gold underline-offset-4 hover:underline"
           >
             +234 816 048 2356
+          </a>
+          {" · "}
+          <a
+            href="mailto:academywriterpreneur@gmail.com"
+            className="font-medium text-gold underline-offset-4 hover:underline"
+          >
+            academywriterpreneur@gmail.com
           </a>
         </p>
         <p className="mt-2 text-xs text-muted-foreground/70">
