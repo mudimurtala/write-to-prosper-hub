@@ -25,7 +25,7 @@ export const faqs = [
 ];
 
 export function Faq() {
-  const [openIdx, setOpenIdx] = useState<number | null>(0);
+  const [openIdx, setOpenIdx] = useState<number | null>(null);
 
   return (
     <div className="divide-y divide-gold/15 overflow-hidden rounded-xl border border-gold/20 bg-ink-soft">

@@ -170,7 +170,10 @@ function LandingPage() {
                 "Emails",
                 "Business documents",
               ].map((i) => (
-                <li key={i}>— {i}</li>
+                <li key={i} className="flex gap-2">
+                  <span aria-hidden="true">—</span>
+                  <span>{i}</span>
+                </li>
               ))}
             </ul>
           </div>
@@ -185,7 +188,10 @@ function LandingPage() {
                 "How to position yourself professionally",
                 "How to turn writing into a sustainable career",
               ].map((i) => (
-                <li key={i}>— {i}</li>
+                <li key={i} className="flex gap-2">
+                  <span aria-hidden="true">—</span>
+                  <span>{i}</span>
+                </li>
               ))}
             </ul>
           </div>
@@ -343,7 +349,9 @@ function LandingPage() {
       {/* Final CTA */}
       <Section>
         <div className="text-center">
-          <h2 className="text-4xl leading-tight sm:text-5xl">READY TO WRITE 2 EARN?</h2>
+          <h2 className="text-4xl leading-tight sm:text-5xl">
+            READY TO WRITE <span className="text-[1.25em]">2</span> EARN?
+          </h2>
           <p className="mx-auto mt-5 max-w-xl text-muted-foreground">
             Join the FREE Write 2 Earn Webinar and discover how your writing skills can become
             valuable professional opportunities.
